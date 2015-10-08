@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            color: #ff0000;
+            background: url('resources/images/background.gif') repeat;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="http://who.pho.to/img/thumbs/skullandbonesskateboards.com_favicon.jpg">
+    <title>MY PERSONAL WEB SITE</title>
+</head>
+<body>
+
+<div style="align:center;" align="center">
+    <img src="resources/images/Fire.gif" style="display: inline;">
+
+    <h1 style="display: inline;"><img src="resources/images/CaCapitolHill1114Under_Construction.gif">WELCOME TO MY NEW WEBSITE!!!<img src="resources/images/CaCapitolHill1114Under_Construction.gif"></h1>
+    <img src="resources/images/Fire.gif" style="display: inline;">
+</div>
+
+<hr>
+<div style="align:center;" align="center">
+    <h1><img src="resources/images/conunderc.gif">still in construction, come back soon!!!<img src="resources/images/conunderc.gif"></h1>
+    <img src="resources/images/2_workers.gif">
+    <table>
+        <tr>
+            <th><img src="resources/images/counter.gif" alt="ALL THOSE VISITS!! WOW"/>THIS WEBSITE IS VERY POPULAR!</th>
+            <th><img src="resources/images/heart-red-animated.gif">YOU WILL GET ADICTED!<img src="resources/images/heart-red-animated.gif"></th>
+        </tr>
+        <tr>
+            <th><img src="resources/images/devilanim_e0.gif"></th>
+            <th><img src="resources/images/globe.gif"></th>
+            <th><img src="resources/images/tripod.jpg"></th>
+        </tr>
+        <tr>
+            <th><img src="resources/images/macmade-wht.gif"></th>
+            <th><img src="resources/images/netscapedragon.gif"></th>
+            <th><img src="resources/images/satan_x93.gif"></th>
+        </tr>
+    </table>
+</div>
+
+<hr>
+
+<h1>Commander Keen Cheats!</h1>
+CLICK <a href="">HERE!!!</a> for COOL CHEATS !!!
+
+<hr>
+<div align="center">
+    <span>Made with love using:</span><br />
+    <img src="resources/images/ns_logo.gif">
+    <img src="resources/images/ie_logo.gif">
+    <img src="resources/images/noframes.gif">
+    <img src="resources/images/notepad.gif">
+    <img src="resources/images/vi_powered_by_sven.gif">
+</div>
+
+
+<script>
+    (function titleMarquee() {
+        var documentTitle = document.title;
+        document.title = documentTitle = documentTitle.substring(1) + documentTitle.substring(0, 1);
+        setTimeout(titleMarquee, 200);
+    })();
+
+    document.onmousedown = disableclick;
+    status = "This source code is Copyrighted (c) ";
+    function disableclick(event) {
+        if (event.button == 2) {
+            alert(status);
+            return false;
+        }
+    }
+
+    /*
+     Simple Image Trail script- By JavaScriptKit.com
+     Visit http://www.javascriptkit.com for this script and more
+     This notice must stay intact
+     */
+    var trailimage = ["resources/images/Flame-1.gif", 100, 99] //image path, plus width and height
+    var offsetfrommouse = [10, -20] //image x,y offsets from cursor position in pixels. Enter 0,0 for no offset
+    var displayduration = 0 //duration in seconds image should remain visible. 0 for always.
+
+    if (document.getElementById || document.all)
+        document.write('<div id="trailimageid" style="position:absolute;visibility:visible;left:0px;top:0px;width:1px;height:1px"><img src="' + trailimage[0] + '" border="0" width="' + trailimage[1] + 'px" height="' + trailimage[2] + 'px"></div>')
+
+    function gettrailobj() {
+        if (document.getElementById)
+            return document.getElementById("trailimageid").style
+        else if (document.all)
+            return document.all.trailimagid.style
+    }
+
+    function truebody() {
+        return (!window.opera && document.compatMode && document.compatMode != "BackCompat") ? document.documentElement : document.body
+    }
+
+    function hidetrail() {
+        gettrailobj().visibility = "hidden"
+        document.onmousemove = ""
+    }
+
+    function followmouse(e) {
+        var xcoord = offsetfrommouse[0]
+        var ycoord = offsetfrommouse[1]
+        if (typeof e != "undefined") {
+            xcoord += e.pageX
+            ycoord += e.pageY
+        }
+        else if (typeof window.event != "undefined") {
+            xcoord += truebody().scrollLeft + event.clientX
+            ycoord += truebody().scrollTop + event.clientY
+        }
+        var docwidth = document.all ? truebody().scrollLeft + truebody().clientWidth : pageXOffset + window.innerWidth - 15
+        var docheight = document.all ? Math.max(truebody().scrollHeight, truebody().clientHeight) : Math.max(document.body.offsetHeight, window.innerHeight)
+        if (xcoord + trailimage[1] + 3 > docwidth || ycoord + trailimage[2] > docheight)
+            gettrailobj().display = "none"
+        else
+            gettrailobj().display = ""
+        gettrailobj().left = xcoord + "px"
+        gettrailobj().top = ycoord + "px"
+    }
+
+    document.onmousemove = followmouse
+
+    if (displayduration > 0)
+        setTimeout("hidetrail()", displayduration * 1000);
+</script>
+</body>
+</html>
